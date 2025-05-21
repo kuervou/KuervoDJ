@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>KuervoDJ README</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; line-height: 1.6; background: #f9f9f9; }
+    img { max-width: 100%; height: auto; }
+    pre { background: #eee; padding: 10px; overflow-x: auto; }
+    code { font-family: Consolas, monospace; }
+    h1, h2, h3 { color: #333; }
+    ul { margin-left: 20px; }
+    a { color: #1a0dab; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+<h1>KuervoDJ 🎧🦉</h1>
+<p></p>
+<img src="./images/KuervoFondo.png" alt="Logo KuervoDJ">
+<p></p>
+<p>**KuervoDJ** es tu mezclador de audio casero para Windows, construido en **Python** con <a href="https://ttkbootstrap.readthedocs.io/">ttkbootstrap</a>, `pygame` y `pycaw`. Controla volumen por aplicación, haz crossfades suaves y reproduce efectos de sonido con atajos, todo desde una interfaz dark elegante.</p>
+<p></p>
+<hr>
+<p></p>
+<h2>Capturas de pantalla</h2>
+<p></p>
+<img src="./images/V1.1.png" alt="Interfaz KuervoDJ v1.1">
+<p>*Interfaz principal con crossfade y botonera de sonidos*</p>
+<p></p>
+<hr>
+<p></p>
+<h2>Características</h2>
+<p></p>
+<ul>
+<li>**Control de volumen por aplicación**: Usa la API de audio de Windows (`pycaw`) para ajustar individualmente cualquier app.</li>
+<li>**Crossfade refinado**: Fundido entre dos procesos con sliders verticales o atajos de teclado.</li>
+<li>**Atajos de teclado**:</li>
+</ul>
+<p>  - Flechas ↑/↓: volumen App A</p>
+<p>  - Shift + ↑/↓: volumen App B</p>
+<p>  - ESC: detiene todos los sonidos</p>
+<p>  - F1–F12 y 1–0: disparan hasta 22 efectos desde la botonera.</p>
+<ul>
+<li>**Botonera de sonidos dinámica**: Carga automática de todos los `.mp3`/`.wav` en `./audios`.</li>
+<li>**UI moderna y responsiva**: Tema darkly, logo animado al pasar el mouse y footer con firma y enlace al autor.</li>
+<li>**Portable &amp; standalone**: Construible como un único `.exe` con PyInstaller (ver sección “Empaquetado”).</li>
+</ul>
+<p></p>
+<hr>
+<p></p>
+<h2>Estructura del proyecto</h2>
+<p></p>
+<pre><code>
+KuervoDJ/
+├── KuervoDJ.py
+├── KuervoDJ.spec
+├── images/
+│   ├── KuervoDJ.ico
+│   ├── KuervoDJ.png
+│   └── KuervoDJ2.png
+├── audios/
+└── README.md
+</code></pre>
+<p></p>
+<hr>
+<p></p>
+<h2>Requisitos e Instalación</h2>
+<p></p>
+<p>1. Clona el repositorio:</p>
+<p>   ```bash</p>
+<p>   git clone https://github.com/tu-usuario/KuervoDJ.git</p>
+<p>   cd KuervoDJ</p>
+<p>   ```</p>
+<p>2. Instala dependencias:</p>
+<p>   ```bash</p>
+<p>   pip install ttkbootstrap pygame pycaw comtypes Pillow</p>
+<p>   ```</p>
+<p></p>
+<hr>
+<p></p>
+<h2>Uso en desarrollo</h2>
+<p></p>
+<pre><code>
+python KuervoDJ.py
+</code></pre>
+<p></p>
+<hr>
+<p></p>
+<h2>Empaquetado a .exe</h2>
+<p></p>
+<p>Para generar un único ejecutable portable (`dist/KuervoDJ.exe`):</p>
+<p></p>
+<pre><code>
+pip install pyinstaller
+pyinstaller --onefile --windowed \
+  --icon &quot;images/KuervoDJ.ico&quot; \
+  --add-data &quot;images;images&quot; \
+  --add-data &quot;audios;audios&quot; \
+  --hidden-import comtypes \
+  --hidden-import pycaw.pycaw \
+  KuervoDJ.py
+</code></pre>
+<p></p>
+<hr>
+<p></p>
+<h2>Roadmap</h2>
+<p></p>
+<ul>
+<li>Controles Play/Pause/Next para apps multimedia (Spotify, Chrome).</li>
+<li>Selector de salida de audio (principal/secundaria).</li>
+<li>Actualizaciones automáticas.</li>
+<li>Visualización de niveles de audio en tiempo real.</li>
+</ul>
+<p></p>
+<hr>
+<p></p>
+<h2>Autor</h2>
+<p></p>
+<p>**Hernán Cabara** — <a href="https://hernancabara.com">hernancabara.com</a>  </p>
+<p>Sígueme en <a href="https://github.com/kuervou">GitHub</a> · <a href="https://twitter.com/hernancabara">Twitter</a></p>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<h1>🎧 KuervoDJ v1.0</h1>
+
+<p><strong>KuervoDJ</strong> es una aplicación de escritorio para Windows que permite controlar el volumen de las aplicaciones abiertas, hacer crossfades suaves entre ellas y reproducir efectos de sonido con atajos personalizados. Inspirado en el mezclador de volumen nativo de Windows, pero con <em>estilo, onda y control total</em>.</p>
+
+<p><img src="../images/KuervoFondo.png" alt="Logo KuervoDJ" /></p>
+
+<hr />
+
+<h2>🚀 Características Principales</h2>
+
+<ul>
+<li>🔊 <strong>Control de volumen por app</strong> usando la API de audio de Windows (<code>pycaw</code>).</li>
+<li>🎚️ <strong>Crossfade entre dos aplicaciones activas</strong> (ej: Chrome y Spotify).</li>
+<li>🧠 <strong>Fades suaves multithread</strong> para transiciones más naturales.</li>
+<li>🖱️ <strong>Interfaz gráfica moderna</strong> con <a href="https://ttkbootstrap.readthedocs.io/"><code>ttkbootstrap</code></a> y tema <code>darkly</code>.</li>
+<li>🎵 <strong>Botonera de sonidos</strong> que carga dinámicamente desde la carpeta <code>./audios</code>.</li>
+<li>⌨️ <strong>Atajos de teclado</strong> para los primeros 20 sonidos (<code>F1-F10</code>, <code>1-0</code>).</li>
+<li>🖼️ <strong>Logo animado al pasar el mouse</strong> con link directo a <a href="https://hernancabara.com">hernancabara.com</a>.</li>
+<li>✨ <strong>UI con firma de autor, estilo dark elegante, sin distracciones.</strong></li>
+</ul>
+
+<hr />
+
+<h2>🖼️ Interfaz de Usuario</h2>
+
+<ul>
+<li><strong>KuervoDJ.png</strong>: logo principal.</li>
+<li><strong>KuervoDJ2.png</strong>: versión con pico abierto que se activa al pasar el mouse.</li>
+<li><strong>Botonera</strong>: muestra el nombre del archivo de audio + su atajo.</li>
+<li><strong>Footer</strong>: indica versión y link del autor, con efecto hover.</li>
+</ul>
+
+<hr />
+
+<h2>📂 Estructura</h2>
+
+<p><code>
+KuervoDJ/
+├── KuervoDJ.py
+├── KuervoDJ.ico
+├── KuervoDJ.png
+├── KuervoDJ2.png
+├── audios/
+│   ├── scratch.mp3
+│   ├── sirena.wav
+│   └── ...
+</code></p>
+
+<hr />
+
+<h2>📦 Requisitos</h2>
+
+<ul>
+<li>Python 3.10 o superior</li>
+<li>Dependencias (instalar con pip):</li>
+</ul>
+
+<p><code>bash
+pip install ttkbootstrap pygame pycaw comtypes pillow
+</code></p>
+
+<hr />
+
+<h2>🛠️ Cómo ejecutar</h2>
+
+<p><code>bash
+python KuervoDJ.py
+</code></p>
+
+<hr />
+
+<h2>💡 Ideas futuras (v1.1)</h2>
+
+<ul>
+<li>▶️⏸️ Controles universales de <strong>Play / Pause / Next</strong> para apps multimedia.</li>
+<li>🎛️ Panel de salidas de audio (principal/secundaria).</li>
+<li>🌈 Efectos visuales en tiempo real.</li>
+</ul>
+
+<hr />
+
+<h2>🐣 Nacimiento del proyecto</h2>
+
+<blockquote>
+  <p>La idea original surgió de replicar el mezclador de volumen de Windows…<br />
+  pero con personalidad.<br />
+  Y KuervoDJ fue tomando forma.</p>
+</blockquote>
+
+<hr />
+
+<h2>📸 Autor</h2>
+
+<p>Creado con pasión por <a href="https://hernancabara.com">Hernán Cabara</a><br />
+🖤 <a href="https://github.com/kuervou">@hernancabara</a></p>
